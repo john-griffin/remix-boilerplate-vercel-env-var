@@ -2,6 +2,7 @@ import { useLoaderData } from "@remix-run/react";
 import { LoaderArgs, json } from "@vercel/remix";
 
 export const loader = async ({ params }: LoaderArgs) => {
+  console.log(process.env);
   const sampleEnvVar = process.env.SAMPLE_ENV_VAR;
   return json({ sampleEnvVar });
 }
